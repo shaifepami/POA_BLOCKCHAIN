@@ -1,0 +1,55 @@
+#Create new node 11
+----------------------------------
+./geth --datadir node11 account new
+Password: 333
+
+Public address of the key:   0x5735de52619188b8B3F5d2671d0Def0C8E5fD6D2
+Path of the secret key file: node11\keystore\UTC--2021-02-11T04-58-25.213397200Z--5735de52619188b8b3f5d2671d0def0c8e5fd6d2
+
+#Create new node 22
+----------------------------------
+./geth --datadir node22 account new
+Password: 333
+
+Public address of the key:   0xac0563BBB0a5E91BA6eF3Ca1Fd8CF0C950859b07
+Path of the secret key file: node22\keystore\UTC--2021-02-11T05-01-24.684500900Z--ac0563bbb0a5e91ba6ef3ca1fd8cf0c950859b07
+
+Step 1
+./puppeth
+
+Step 2
+Network: dlchain
+
+Configure new genesis
+Crate new genesis from scratch
+Which Consensus: Clique - proof-of-authority
+How many seconds should blocks take?: 15sec
+
+Which accounts are allowed to seal?
+> 0x5735de52619188b8B3F5d2671d0Def0C8E5fD6D2
+> 0xac0563BBB0a5E91BA6eF3Ca1Fd8CF0C950859b07
+
+Which accounts should be pre-funded? (advisable at least one)
+> 0x5735de52619188b8B3F5d2671d0Def0C8E5fD6D2
+> 0xac0563BBB0a5E91BA6eF3Ca1Fd8CF0C950859b07
+
+
+Should the precompile-addresses (0x1 .. 0xff) be pre-funded with 1 wei? (advisable yes)
+> no
+
+Specify your chain/network ID: 777
+
+What would you like to do?
+2. Manage existing genesis
+
+2. Export genesis configurations
+
+Which folder to save the genesis specs into?
+dlchain
+
+Which folder to save the genesis specs into?
+
+
+Initialise the nodeos with the genesis' json file:
+./geth init fintech/fintech.json --datadir node11
+./geth init fintech/fintech.json --datadir node22
