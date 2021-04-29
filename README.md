@@ -128,13 +128,14 @@ The PoA blockchain should be now up and running.
 ![SetUpYourCustomNode](Images/AccountBalance2.png)
 
 - In the To Address box, type the account address from Node22, then fill in an arbitrary amount of ETH:
-![SetUpYourCustomNode](Images/send_tnx1.png)
+![SetUpYourCustomNode](Images/send_txn1.png)
 
 - Confirm the transaction by clicking "Send Transaction", and the "Send" button in the pop-up window.
-![SetUpYourCustomNode](Images/confirm_txt2.png)
+![SetUpYourCustomNode](Images/Confirm_txt2.png)
 
 - Click the Check TX Status when the green message pops up, confirm the logout:
-![SetUpYourCustomNode](Images/confirm_txn3.png)
+![SetUpYourCustomNode](Images/Confirm_txn3.png)
+
 ![SetUpYourCustomNode](Images/logout_tnx.png)
 
 - You should see the transaction go from Pending to Successful in around the same blocktime you set in the genesis.
