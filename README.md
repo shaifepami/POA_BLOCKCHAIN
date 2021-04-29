@@ -1,7 +1,9 @@
-# Building the Proof of Authority Blockchain
+# HOW I BUILT MY PROOF OF AUTHORITY BLOCKCHAIN
  
- ## 
- In this project, I built my custom PoA blockchain using the following tools:
+ ## SETTING BlOCKCHAIN MINNING TOOLS - GO ETHEREUM TOOLS
+THe Go Ethereum Tools is one of the three original implementations of the Ethereum protocol. It is written in Go, fully open-source and licensed under the GNU LGPL v3.
+
+In order to be able to build the POA, we will need to install the following tools
 
 •  `Puppeth` - to generate the genesis block
 
@@ -10,6 +12,24 @@
 •  The `Clique` Proof of Authority algorithm.
 
 The `Proof of Authority (PoA)` algorithm is typically used for private blockchain networks as it requires pre-approval of, or voting in of, the account addresses that can approve transactions (seal blocks).
+
+Below are the steps to follows to install the GO Ethereum tools
+
+ (1) Open your browser and navigate to the Go Ethereum Tools download page at https://geth.ethereum.org/downloads/
+
+ (2) Scroll down to the "Stable Releases" section and proceed depending on your operating system. Depending on the OS and the version of the Windows version, you should download the 32 bit or 64 bit version of the Go Ethereum Tools.
+
+ (3) After downloading the tools archive, open your "Downloads" folder, and you will find a file named geth-alltools-darwin-amd64-1.9.7-a718daa6.tar.gz in OS X, and a file called geth-alltools-windows-amd64-1.9.7-a718daa6.zip in Windows. Note that the last numbers in the filename could vary depending on the last built available.
+ 
+ (4) Decompress the archive in the location of your preference in your computer's hard drive, and rename the containing folder as Blockchain-Tools. We recommend using a location that can be easily accessed from the terminal window like the user's home directory.
+
+ ![SetUpYourCustomNode](Images/Environment.png)
+ (5)  You have finished the installation process; you will use these tools to create your very own blockchain!
+
+
+
+
+
 
 In what follows, I present the instructions for setting up the `PoA` blockchain.
 
