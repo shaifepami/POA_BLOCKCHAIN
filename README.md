@@ -1,6 +1,6 @@
 # HOW I BUILT MY PROOF OF AUTHORITY BLOCKCHAIN
  
- ## SETTING BlOCKCHAIN MINNING TOOLS - GO ETHEREUM TOOLS
+ ## STEP 1: SETTING BlOCKCHAIN MINNING TOOLS - GO ETHEREUM
 THe Go Ethereum Tools is one of the three original implementations of the Ethereum protocol. It is written in Go, fully open-source and licensed under the GNU LGPL v3.
 
 In order to be able to build the POA, we will need to install the following tools
@@ -23,23 +23,18 @@ Below are the steps to follows to install the GO Ethereum tools
  
  (4) Decompress the archive in the location of your preference in your computer's hard drive, and rename the containing folder as Blockchain-Tools. We recommend using a location that can be easily accessed from the terminal window like the user's home directory.
 
- ![SetUpYourCustomNode](Images\Environment.jpg)
- 
+ ![SetUpYourCustomNode](Images/Environment.png)
  (5)  You have finished the installation process; you will use these tools to create your very own blockchain!
 
 
+# STEP2: SETUP THE POA BLOCKCHAIN ENVIRONMENT
 
-
-
-
-In what follows, I present the instructions for setting up the `PoA` blockchain.
+The following are instructions in setting up the Proof of Authority (PoA)
 
 # Instructions
 
-## Generate Blockchain Nodes
-Because the accounts must be approved, you need to generate two new nodes with new account addresses that will serve as the pre-approved sealer addresses.
-
-For this purpose we will use **Geth** and create two nodes, **Node 11** and **Node 22** by running the following commands in Git Bash:
+## STEP 2A: Generate Blockchain Nodes
+Generate two new nodes with new account addresses that will serve as the pre-approved sealer addresses using the Geth to create two nodes. For my purpose of demonstration i created  **Node 11** and **Node 22** by running the following commands  terminals such as Git Bash:
 
 **Create Node 11:**
 
@@ -49,12 +44,12 @@ For this purpose we will use **Geth** and create two nodes, **Node 11** and **No
 
 `./geth --datadir node2 account new`
 
-You need to run these commands from the folder in which you have your Geth installed. Once the two nodes have been generated, there will be two folders created – `node11` and `node22` – each containing a folder with a keystore for that node.
+It is expected that you run these commands from the folder in which you have Geth installed. Once the two nodes have been generated, there will be two folders created – `node11` and `node22` – each containing a folder with a keystore for that node.
 
 ## Generate your Genesis Block
-Next we will use **puppeth** to generate your genesis block:
+Next use **puppeth** to generate the genesis block following the procedure below:
 
-- Run `puppeth`, name your network, and select the option to `configure a new genesis block`. I named my PoA network `dlchain`.
+- Run `puppeth`, name your network, and select the option to `configure a new genesis block`. I named my PoA network `samchain`.
 
 - Choose the `Clique` (Proof of Authority) consensus algorithm.
 
@@ -66,17 +61,17 @@ Next we will use **puppeth** to generate your genesis block:
 
 - Complete the rest of the prompts, and when you are back at the main menu, choose the "Manage existing genesis" option.
 
-- Export genesis configurations. This will fail to create two of the files, but we only need `dlchain.json`.
+- Export genesis configurations. This will fail to create two of the files, but we only need  the json for the name of your network and specifically for my network being `samchain.json`.
 
 ## Initialize the Nodes with the Genesis' Json File
 
-Using geth, we initialize each node with the new `dlchain.json`.
+Using geth,initialize each node with the new `samchain.json`.
 
-Open side by side two Git Bash windows, one for Node 11 and the other for Node 22, and run the following commands:
+Open side by side two  terminals such as Git Bash windows, one for Node 11 and the other for Node 22, and run the following commands:
 
-`./geth --datadir node11 init dlchain.json`
+`./geth --datadir node11 init samchain.json`
 
-`./geth --datadir node22 init dlchain.json`
+`./geth --datadir node22 init samchain.json`
 
 
 ## Begin Mining Blocks
@@ -90,14 +85,14 @@ Run the nodes in separate terminal windows with the commands:
 **NOTE**: Type your password and hit enter - even if you can't see it visually!
 
 The PoA blockchain should be now up and running.
-![StartMining](POA-Development-Chain/Screenshots/StartMining.png)
+![StartMining](Images/Screenshots/StartMining.png)
 
-## Add the New Blockchain to MyCrypto for Testing
+## STEP3: Add the New Blockchain to MyCrypto for Testing
 
 - Open the `MyCrypto` app, then click Change Network at the bottom left
 - Click "Add Custom Node", then add the custom network information that you set in the genesis.
 - Make sure that you scroll down to choose Custom in the "Network" column to reveal more options like Chain ID:
-![SetUpYourCustomNode](POA-Development-Chain/Screenshots/CustomNode.png)
+![SetUpYourCustomNode](Images/Screenshots/CustomNode.png)
 
 - Type `ETH` in the Currency box.
 - In the Chain ID box, type the chain id you generated during genesis creation. 
@@ -109,31 +104,31 @@ The PoA blockchain should be now up and running.
 
 - Select the View & Send option from the left menu pane, then click Keystore file.
 
-![SetUpYourCustomNode](POA-Development-Chain/Screenshots/KeystoreFile.png)
+![SetUpYourCustomNode](Images/Screenshots/KeystoreFile.png)
 
 - On the next screen, click Select `Wallet File`, then navigate to the keystore directory inside your Node11 directory, select the file located there, provide your password when prompted and then click `Unlock`.
 
-![SetUpYourCustomNode](POA-Development-Chain/Screenshots/UnlockKeystoreFile.png)
-![SetUpYourCustomNode](POA-Development-Chain/Screenshots/KeystorePassword.png)
+![SetUpYourCustomNode](Images/Screenshots/UnlockKeystoreFile.png)
+![SetUpYourCustomNode](Images/Screenshots/KeystorePassword.png)
 
 - This will open your account wallet inside MyCrypto.
 
 - You will see that your account has a huge balance. This is the balance that was pre-funded for this account in the genesis configuration; however, these millions of ETH tokens are just for testing purposes.
-![SetUpYourCustomNode](POA-Development-Chain/Screenshots/AccountBalance.png)
+![SetUpYourCustomNode](Images/Screenshots/AccountBalance.png)
 
 - In the To Address box, type the account address from Node22, then fill in an arbitrary amount of ETH:
-![SetUpYourCustomNode](POA-Development-Chain/Screenshots/ToAccount.png)
+![SetUpYourCustomNode](Images/Screenshots/ToAccount.png)
 
 - Confirm the transaction by clicking "Send Transaction", and the "Send" button in the pop-up window.
-![SetUpYourCustomNode](POA-Development-Chain/Screenshots/ConfirmTransaction.png)
+![SetUpYourCustomNode](Images/Screenshots/ConfirmTransaction.png)
 
 - Click the Check TX Status when the green message pops up, confirm the logout:
-![SetUpYourCustomNode](POA-Development-Chain/Screenshots/TxConf.png)
-![SetUpYourCustomNode](POA-Development-Chain/Screenshots/AbtL.png)
+![SetUpYourCustomNode](Images/Screenshots/TxConf.png)
+![SetUpYourCustomNode](Images/Screenshots/AbtL.png)
 
 - You should see the transaction go from Pending to Successful in around the same blocktime you set in the genesis.
 
 - You can click the Check TX Status button to update the status.
-![SetUpYourCustomNode](POA-Development-Chain/Screenshots/TxSucc.png)
+![SetUpYourCustomNode](Images/Screenshots/TxSucc.png)
 
 - This confirms that you have successfully created your own private blockchain!
