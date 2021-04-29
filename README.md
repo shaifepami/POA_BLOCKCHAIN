@@ -23,7 +23,8 @@ Below are the steps to follows to install the GO Ethereum tools
  
  (4) Decompress the archive in the location of your preference in your computer's hard drive, and rename the containing folder as Blockchain-Tools. We recommend using a location that can be easily accessed from the terminal window like the user's home directory.
 
- ![SetUpYourCustomNode](Images/Environment.png)
+ ![SetUpYourCustomNode](Images\Environment.jpg)
+ 
  (5)  You have finished the installation process; you will use these tools to create your very own blockchain!
 
 
