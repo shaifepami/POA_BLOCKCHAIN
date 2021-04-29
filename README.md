@@ -19,9 +19,11 @@ Below are the steps to follows to install the GO Ethereum tools
 
  (2) Scroll down to the "Stable Releases" section and proceed depending on your operating system. Depending on the OS and the version of the Windows version, you should download the 32 bit or 64 bit version of the Go Ethereum Tools.
 
- (3) After downloading the tools archive, open your "Downloads" folder, and you will find a file named geth-alltools-darwin-amd64-1.9.7-a718daa6.tar.gz in OS X, and a file called geth-alltools-windows-amd64-1.9.7-a718daa6.zip in Windows. Note that the last numbers in the filename could vary depending on the last built available.
+ (3) After downloading the tools archive, open your "Downloads" folder, and you will find a file named geth-alltools-darwin-amd64-1.9.7-a718daa6.tar.gz in OS X, and a file called geth-alltools-windows-amd64-1.9.7-a718daa6.zip in Windows. 
  
- (4) Decompress the archive in the location of your preference in your computer's hard drive, and rename the containing folder as Blockchain-Tools. We recommend using a location that can be easily accessed from the terminal window like the user's home directory.
+ Note that the last numbers in the filename could vary depending on the last built available.
+ 
+ (4) Decompress the archive in the location of your preference in your computer's hard drive, and rename the containing folder as Blockchain-Tools. I recommend using a location that can be easily accessed from the terminal window like your user's home directory.
 
  ![SetUpYourCustomNode](Images/Environment.png)
  
