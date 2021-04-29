@@ -134,12 +134,12 @@ The PoA blockchain should be now up and running.
 ![SetUpYourCustomNode](Images/confirm_txt2.png)
 
 - Click the Check TX Status when the green message pops up, confirm the logout:
-![SetUpYourCustomNode](Images/Screenshots/confirm_txn3.png)
-![SetUpYourCustomNode](Images/Screenshots/logout_tnx.png)
+![SetUpYourCustomNode](Images/confirm_txn3.png)
+![SetUpYourCustomNode](Images/logout_tnx.png)
 
 - You should see the transaction go from Pending to Successful in around the same blocktime you set in the genesis.
 
 - You can click the Check TX Status button to update the status.
-![SetUpYourCustomNode](Images/Screenshots/check_tnx_status.png)
+![SetUpYourCustomNode](Images/check_tnx_status.png)
 
 - This confirms that you have successfully created your own private blockchain!
