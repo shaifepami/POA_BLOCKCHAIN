@@ -40,11 +40,16 @@ Generate two new nodes with new account addresses that will serve as the pre-app
 
 `./geth --datadir node11 account new`
 
+![SetUpYourCustomNode](Images/node11.jpg)
+
+
 **Create Node 22:**
 
 `./geth --datadir node2 account new`
 
-It is expected that you run these commands from the folder in which you have Geth installed. Once the two nodes have been generated, there will be two folders created – `node11` and `node22` – each containing a folder with a keystore for that node.
+![SetUpYourCustomNode](Images/node22.jpg)
+
+It is expected that you have to run these commands from the folder in which you have Geth installed. Once the two nodes have been generated, there will be two folders created – `node11` and `node22` – each containing a folder with a keystore for that node.
 
 ## Generate your Genesis Block
 Next use **puppeth** to generate the genesis block following the procedure below:
@@ -63,6 +68,8 @@ Next use **puppeth** to generate the genesis block following the procedure below
 
 - Export genesis configurations. This will fail to create two of the files, but we only need  the json for the name of your network and specifically for my network being `samchain.json`.
 
+![StartMiningr](Images/network.jpg)
+
 ## Initialize the Nodes with the Genesis' Json File
 
 Using geth,initialize each node with the new `samchain.json`.
@@ -72,6 +79,8 @@ Open two  terminals such as Git Bash windows, one for Node 11 and the other for 
 `./geth --datadir node11 init samchain.json`
 
 `./geth --datadir node22 init samchain.json`
+
+![StartMininrg](Images/init_node.jpg)
 
 
 ## Begin Mining Blocks
@@ -84,15 +93,17 @@ Run the nodes in the  two separate terminal  that were opened in the above step 
 
 **NOTE**: Type your password and hit enter - even if you can't see it visually!
 
+
+
 The PoA blockchain should be now up and running.
-![StartMining](Images/Screenshots/StartMining.png)
+![StartMining](Images/mining3.jpg)
 
 ## STEP3: Add the New Blockchain to MyCrypto for Testing
 
 - Open the `MyCrypto` app, then click Change Network at the bottom left
 - Click "Add Custom Node", then add the custom network information that you set in the genesis.
 - Make sure that you scroll down to choose Custom in the "Network" column to reveal more options like Chain ID:
-![SetUpYourCustomNode](Images/Screenshots/CustomNode.png)
+![SetUpYourCustomNode](Images/Custom_node.jpg)
 
 - Type `ETH` in the Currency box.
 - In the Chain ID box, type the chain id you generated during genesis creation. 
@@ -104,31 +115,31 @@ The PoA blockchain should be now up and running.
 
 - Select the View & Send option from the left menu pane, then click Keystore file.
 
-![SetUpYourCustomNode](Images/Screenshots/KeystoreFile.png)
+![SetUpYourCustomNode](Images/KeystoreFile.png)
 
 - On the next screen, click Select `Wallet File`, then navigate to the keystore directory inside your Node11 directory, select the file located there, provide your password when prompted and then click `Unlock`.
 
-![SetUpYourCustomNode](Images/Screenshots/UnlockKeystoreFile.png)
-![SetUpYourCustomNode](Images/Screenshots/KeystorePassword.png)
+![SetUpYourCustomNode](Images/UnlockKeystoreFile.png)
+![SetUpYourCustomNode](Images/KeystorePassword.png)
 
 - This will open your account wallet inside MyCrypto.
 
 - You will see that your account has a huge balance. This is the balance that was pre-funded for this account in the genesis configuration; however, these millions of ETH tokens are just for testing purposes.
-![SetUpYourCustomNode](Images/Screenshots/AccountBalance.png)
+![SetUpYourCustomNode](Images/AccountBalance2.png)
 
 - In the To Address box, type the account address from Node22, then fill in an arbitrary amount of ETH:
-![SetUpYourCustomNode](Images/Screenshots/ToAccount.png)
+![SetUpYourCustomNode](Images/send_tnx1.png)
 
 - Confirm the transaction by clicking "Send Transaction", and the "Send" button in the pop-up window.
-![SetUpYourCustomNode](Images/Screenshots/ConfirmTransaction.png)
+![SetUpYourCustomNode](Images/confirm_txt2.png)
 
 - Click the Check TX Status when the green message pops up, confirm the logout:
-![SetUpYourCustomNode](Images/Screenshots/TxConf.png)
-![SetUpYourCustomNode](Images/Screenshots/AbtL.png)
+![SetUpYourCustomNode](Images/Screenshots/confirm_txn3.png)
+![SetUpYourCustomNode](Images/Screenshots/logout_tnx.png)
 
 - You should see the transaction go from Pending to Successful in around the same blocktime you set in the genesis.
 
 - You can click the Check TX Status button to update the status.
-![SetUpYourCustomNode](Images/Screenshots/TxSucc.png)
+![SetUpYourCustomNode](Images/Screenshots/check_tnx_status.png)
 
 - This confirms that you have successfully created your own private blockchain!
