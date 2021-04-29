@@ -80,11 +80,15 @@ Open two  terminals such as Git Bash windows, one for Node 11 and the other for 
 
 `./geth --datadir node22 init samchain.json`
 
-## KEYWORDS TO NOTE
+### KEYWORDS TO NOTE
  node11                             This is the name of the Blockchain Nodes for the new account  i created
+ 
  node22                             This is the name of the 2nd Blockchain Nodes for the 2nd new account  i created
+ 
  init                               Bootstrap and initialize a new genesis block
+ 
  samchain.json                      The json file of the network name i created.
+ 
 --datadir                           Data directory for the databases and keystore (default: "~/.ethereum")
 
 ![StartMininrg](Images/init_node.jpg)
