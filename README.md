@@ -45,9 +45,9 @@ Generate two new nodes with new account addresses that will serve as the pre-app
 
 **Create Node 22:**
 
-`./geth --datadir node2 account new`
+`./geth --datadir ode2 account new`
 
-![SetUpYourCustomNode](Images/node22.jpg)
+![SetUpYourCustomNode](Images/Node22.jpg)
 
 It is expected that you have to run these commands from the folder in which you have Geth installed. Once the two nodes have been generated, there will be two folders created – `node11` and `node22` – each containing a folder with a keystore for that node.
 
