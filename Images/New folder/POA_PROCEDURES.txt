@@ -1,0 +1,264 @@
+samuel.akinnubi@UBANOTE013 MINGW64 /c/users/akinnubisa/Desktop/IT/PERSONAL/FINTECH/Blockchain-Tools
+##############################################################################3
+#####CREATING THE FIRST NODE. I named it node3
+################################################################################
+samuel.akinnubi@UBANOTE013 MINGW64 ~/Desktop/IT/PERSONAL/FINTECH/Blockchain-Tools
+$ ./geth --datadir node3 account new
+INFO [04-29|11:37:54.029] Maximum peer count                       ETH=50 LES=0 total=50
+Your new account is locked with a password. Please give a password. Do not forget this password.
+Password:
+Repeat password:
+
+Your new key was generated
+
+Public address of the key:   0xbEbC71004a6CDfA4D4cf6652582193964007BD40
+Path of the secret key file: node3\keystore\UTC--2021-04-29T15-38-01.306881900Z--bebc71004a6cdfa4d4cf6652582193964007bd40
+
+- You can share your public address with anyone. Others need it to interact with you.
+- You must NEVER share the secret key with anyone! The key controls access to your funds!
+- You must BACKUP your key file! Without the key, it's impossible to access account funds!
+- You must REMEMBER your password! Without the password, it's impossible to decrypt the key!
+
+
+############################################################################################
+###CREATING THE SECOND NODE. I Named it node4
+############################################################################################
+$ ./geth --datadir node4 account new
+INFO [04-29|11:38:30.956] Maximum peer count                       ETH=50 LES=0 total=50
+Your new account is locked with a password. Please give a password. Do not forget this password.
+Password:
+Repeat password:
+
+Your new key was generated
+
+Public address of the key:   0xd43Eae2931f69DE3310b985A17893765D890B180
+Path of the secret key file: node4\keystore\UTC--2021-04-29T15-38-37.769907500Z--d43eae2931f69de3310b985a17893765d890b180
+
+- You can share your public address with anyone. Others need it to interact with you.
+- You must NEVER share the secret key with anyone! The key controls access to your funds!
+- You must BACKUP your key file! Without the key, it's impossible to access account funds!
+- You must REMEMBER your password! Without the password, it's impossible to decrypt the key!
+
+
+$ ./puppeth
++-----------------------------------------------------------+
+| Welcome to puppeth, your Ethereum private network manager |
+|                                                           |
+| This tool lets you create a new Ethereum network down to  |
+| the genesis block, bootnodes, miners and ethstats servers |
+| without the hassle that it would normally entail.         |
+|                                                           |
+| Puppeth uses SSH to dial in to remote servers, and builds |
+| its network components out of Docker containers using the |
+| docker-compose toolset.                                   |
++-----------------------------------------------------------+
+
+Please specify a network name to administer (no spaces, hyphens or capital letters please)
+> sam_blockchain1
+
+Sweet, you can set this via --network=sam_blockchain1 next time!
+
+←[32mINFO ←[0m[04-29|11:40:05.186] Administering Ethereum network           ←[32mname←[0m=sam_blockchain1
+←[33mWARN ←[0m[04-29|11:40:05.199] No previous configurations found         ←[33mpath←[0m=C:\Users\akinnubisa\.puppeth\sam_blockchain1
+
+What would you like to do? (default = stats)
+ 1. Show network stats
+ 2. Configure new genesis
+ 3. Track new remote server
+ 4. Deploy network components
+> 2
+
+What would you like to do? (default = create)
+ 1. Create new genesis from scratch
+ 2. Import already existing genesis
+> 1
+
+Which consensus engine to use? (default = clique)
+ 1. Ethash - proof-of-work
+ 2. Clique - proof-of-authority
+> 2
+
+How many seconds should blocks take? (default = 15)
+>
+
+Which accounts are allowed to seal? (mandatory at least one)
+> 0xbEbC71004a6CDfA4D4cf6652582193964007BD40
+> 0xd43Eae2931f69DE3310b985A17893765D890B180
+> 0x
+
+Which accounts should be pre-funded? (advisable at least one)
+> 0xbEbC71004a6CDfA4D4cf6652582193964007BD40
+> 0xd43Eae2931f69DE3310b985A17893765D890B180
+> 0x
+
+Should the precompile-addresses (0x1 .. 0xff) be pre-funded with 1 wei? (advisable yes)
+> no
+
+Specify your chain/network ID if you want an explicit one (default = random)
+> 777
+←[32mINFO ←[0m[04-29|11:48:55.347] Configured new genesis block
+
+What would you like to do? (default = stats)
+ 1. Show network stats
+ 2. Manage existing genesis
+ 3. Track new remote server
+ 4. Deploy network components
+> 2
+
+ 1. Modify existing configurations
+ 2. Export genesis configurations
+ 3. Remove genesis configuration
+> 2
+
+Which folder to save the genesis specs into? (default = current)
+  Will create sam_blockchain1.json, sam_blockchain1-aleth.json, sam_blockchain1-harmony.json, sam_blockchain1-parity.json
+>
+←[32mINFO ←[0m[04-29|11:49:25.411] Saved native genesis chain spec          ←[32mpath←[0m=sam_blockchain1.json
+←[31mERROR←[0m[04-29|11:49:25.413] Failed to create Aleth chain spec        ←[31merr←[0m="unsupported consensus engine"
+←[31mERROR←[0m[04-29|11:49:25.414] Failed to create Parity chain spec       ←[31merr←[0m="unsupported consensus engine"
+←[32mINFO ←[0m[04-29|11:49:25.422] Saved genesis chain spec                 ←[32mclient←[0m=harmony ←[32mpath←[0m=sam_blockchain1-harmony.json
+
+What would you like to do? (default = stats)
+ 1. Show network stats
+ 2. Manage existing genesis
+ 3. Track new remote server
+ 4. Deploy network components
+
+###########################################################
+###INITIALIZATION OF THE NODES  1 running this command
+#####   ./geth --datadir node1 init networkname.json
+##############################################################################################
+
+$ ./geth --datadir node3 init  sam_blockchain1.json
+INFO [04-29|11:53:32.260] Maximum peer count                       ETH=50 LES=0 total=50
+INFO [04-29|11:53:32.276] Set global gas cap                       cap=25000000
+INFO [04-29|11:53:32.282] Allocated cache and file handles         database=C:\Users\akinnubisa\Desktop\IT\PERSONAL\FINTECH\Blockchain-Tools\node3\geth\chaindata cache=16.00MiB handles=16
+INFO [04-29|11:53:32.314] Writing custom genesis block
+INFO [04-29|11:53:32.319] Persisted trie from memory database      nodes=3 size=455.00B time=0s gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [04-29|11:53:32.330] Successfully wrote genesis state         database=chaindata hash="1d2c49…817772"
+INFO [04-29|11:53:32.337] Allocated cache and file handles         database=C:\Users\akinnubisa\Desktop\IT\PERSONAL\FINTECH\Blockchain-Tools\node3\geth\lightchaindata cache=16.00MiB handles=16
+INFO [04-29|11:53:32.375] Writing custom genesis block
+INFO [04-29|11:53:32.380] Persisted trie from memory database      nodes=3 size=455.00B time=0s gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [04-29|11:53:32.392] Successfully wrote genesis state         database=lightchaindata hash="1d2c49…817772"
+(base)
+
+############################################################################################################################### 
+####### OPen another Terminal and Initialize the Node 2 running this command
+###### ./geth --datadir node1 init networkname.json
+###############################################################################################################################3
+samuel.akinnubi@UBANOTE013 MINGW64 ~/Desktop/IT/PERSONAL/FINTECH/Blockchain-Tools
+$ ./geth --datadir node4 init sam_blockchain1.json
+INFO [04-29|11:54:44.178] Maximum peer count                       ETH=50 LES=0 total=50
+INFO [04-29|11:54:44.198] Set global gas cap                       cap=25000000
+INFO [04-29|11:54:44.204] Allocated cache and file handles         database=C:\Users\akinnubisa\Desktop\IT\PERSONAL\FINTECH\Blockchain-Tools\node4\geth\chaindata cache=16.00MiB handles=16
+INFO [04-29|11:54:44.240] Writing custom genesis block
+INFO [04-29|11:54:44.252] Persisted trie from memory database      nodes=3 size=455.00B time="557µs" gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [04-29|11:54:44.266] Successfully wrote genesis state         database=chaindata hash="1d2c49…817772"
+INFO [04-29|11:54:44.271] Allocated cache and file handles         database=C:\Users\akinnubisa\Desktop\IT\PERSONAL\FINTECH\Blockchain-Tools\node4\geth\lightchaindata cache=16.00MiB handles=16
+INFO [04-29|11:54:44.305] Writing custom genesis block
+INFO [04-29|11:54:44.310] Persisted trie from memory database      nodes=3 size=455.00B time="512.4µs" gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [04-29|11:54:44.320] Successfully wrote genesis state         database=lightchaindata hash="1d2c49…817772"
+(base)
+
+##############################################################################
+######MINING OF THE TWO BLOCKS BY RUNNING THE COMMAND BELOW
+#####Run the nodes in the two separate terminal that were opened in the above step with the commands:
+##./geth --datadir node1 --unlock "SEALER_ONE_ADDRESS" --mine --rpc --allow-insecure-unlock
+
+./geth --datadir node2 --unlock "SEALER_TWO_ADDRESS" --mine --port 30304 --bootnodes "enode://SEALER_ONE_ENODE_ADDRESS@127.0.0.1:30303" --ipcdisable --allow-insecure-unlock
+
+###########################################################################
+
+### ACCOUNT 1
+samuel.akinnubi@UBANOTE013 MINGW64 ~/Desktop/IT/PERSONAL/FINTECH/Blockchain-Tools
+$ ./geth --datadir node3 --unlock 0xbEbC71004a6CDfA4D4cf6652582193964007BD40 --mine --rpc --allow-insecure-unlock
+INFO [04-29|12:03:34.096] Starting Geth on Ethereum mainnet...
+INFO [04-29|12:03:34.107] Bumping default cache on mainnet         provided=1024 updated=4096
+INFO [04-29|12:03:34.118] Maximum peer count                       ETH=50 LES=0 total=50
+WARN [04-29|12:03:34.126] The flag --rpc is deprecated and will be removed June 2021, please use --http
+WARN [04-29|12:03:34.146] Sanitizing cache to Go's GC limits       provided=4096 updated=2681
+INFO [04-29|12:03:34.158] Set global gas cap                       cap=25000000
+INFO [04-29|12:03:34.165] Allocated trie memory caches             clean=402.00MiB dirty=670.00MiB
+INFO [04-29|12:03:34.175] Allocated cache and file handles         database=C:\Users\akinnubisa\Desktop\IT\PERSONAL\FINTECH\Blockchain-Tools\node3\geth\chaindata cache=1.31GiB handles=8192
+INFO [04-29|12:03:34.304] Opened ancient database                  database=C:\Users\akinnubisa\Desktop\IT\PERSONAL\FINTECH\Blockchain-Tools\node3\geth\chaindata\ancient readonly=false
+INFO [04-29|12:03:34.326] Initialised chain configuration          config="{ChainID: 777 Homestead: 0 DAO: <nil> DAOSupport: false EIP150: 0 EIP155: 0 EIP158: 0 Byzantium: 0 Constantinople: 0 Petersburg: 0 Istanbul: 0, Muir Glacier: <nil>, Berlin: <nil>, YOLO v3: <nil>, Engine: clique}"
+INFO [04-29|12:03:34.363] Initialising Ethereum protocol           network=1 dbversion=<nil>
+WARN [04-29|12:03:34.372] Upgrade blockchain database version      from=<nil> to=8
+INFO [04-29|12:03:34.387] Loaded most recent local header          number=0 hash="1d2c49…817772" td=1 age=23m22s
+INFO [04-29|12:03:34.401] Loaded most recent local full block      number=0 hash="1d2c49…817772" td=1 age=23m22s
+INFO [04-29|12:03:34.417] Loaded most recent local fast block      number=0 hash="1d2c49…817772" td=1 age=23m22s
+WARN [04-29|12:03:34.436] Failed to load snapshot, regenerating    err="missing or corrupted snapshot"
+INFO [04-29|12:03:34.449] Rebuilding state snapshot
+INFO [04-29|12:03:34.458] Deleted state snapshot leftovers         kind=accounts wiped=0 elapsed="593.8µs"
+INFO [04-29|12:03:34.459] Wiper running, state snapshotting paused accounts=0 slots=0 storage=0.00B elapsed=1.641ms
+INFO [04-29|12:03:34.472] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [04-29|12:03:34.473] Deleted state snapshot leftovers         kind=storage  wiped=0 elapsed=0s
+INFO [04-29|12:03:34.520] Compacting snapshot account area
+INFO [04-29|12:03:34.558] Allocated fast sync bloom                size=1.31GiB
+INFO [04-29|12:03:34.574] Compacting snapshot storage area
+INFO [04-29|12:03:34.584] Compacted snapshot area in database      elapsed=63.787ms
+INFO [04-29|12:03:34.576] Initialized state bloom                  items=3 errorrate=0.000 elapsed=1.806ms
+INFO [04-29|12:03:34.583] Stored checkpoint snapshot to disk       number=0 hash="1d2c49…817772"
+WARN [04-29|12:03:34.587] Error reading unclean shutdown markers   error="leveldb: not found"
+INFO [04-29|12:03:34.599] Resuming state snapshot generation       root="a0526f…06bee4" accounts=0 slots=0 storage=0.00B elapsed="15µs"
+INFO [04-29|12:03:34.656] Starting peer-to-peer node               instance=Geth/v1.10.2-stable-97d11b01/windows-amd64/go1.16
+INFO [04-29|12:03:34.679] Generated state snapshot                 accounts=2 slots=0 storage=140.00B elapsed=80.140ms
+INFO [04-29|12:03:34.746] New local node record                    seq=1 id=13aac1ec7217efeb ip=127.0.0.1 udp=30303 tcp=30303
+INFO [04-29|12:03:34.778] Started P2P networking                   self=enode://4318a2e6db6532b9ed8bdc36a4f30f102bcedb5c2ac6a071d21a1f15619b726344f6dde47c3ca4376b342d9a7738165be7c87a4ea9b468c4489719e1ada600d0@127.0.0.1:30303
+INFO [04-29|12:03:34.782] IPC endpoint opened                      url=\\.\pipe\geth.ipc
+INFO [04-29|12:03:34.835] HTTP server started                      endpoint=127.0.0.1:8545 prefix= cors= vhosts=localhost
+Unlocking account 0xbEbC71004a6CDfA4D4cf6652582193964007BD40 | Attempt 1/3
+Password: INFO [04-29|12:03:46.663] Looking for peers                        peercount=0 tried=0 static=0
+INFO [04-29|12:03:57.043] Looking for peers                        peercount=0 tried=17 static=0
+INFO [04-29|12:04:08.088] Looking for peers                        peercount=0 tried=18 static=0
+INFO [04-29|12:04:18.525] Looking for peers                        peercount=0 tried=15 static=0
+INFO [04-29|12:04:29.220] Looking for peers                        peercount=0 tried=23 static=0
+INFO [04-29|12:04:40.058] Looking for peers                        peercount=0 tried=5  static=0
+INFO [04-29|12:04:50.752] Looking for peers                        peercount=0 tried=4  static=0
+
+
+#####ACCOUNT 2
+$ ./geth --datadir node4 --unlock 0xd43Eae2931f69DE3310b985A17893765D890B180 --mine --port 30304 --bootnodes enode://4318a2e6db6532b9ed8bdc36a4f30f102bcedb5c2ac6a071d21a1f15619b726344f6dde47c3ca4376b342d9a7738165be7c87a4ea9b468c4489719e1ada600d0@127.0.0.1:30303 --ipcdisable --allow-insecure-unlock
+INFO [04-29|12:19:03.164] Starting Geth on Ethereum mainnet...
+INFO [04-29|12:19:03.170] Bumping default cache on mainnet         provided=1024 updated=4096
+INFO [04-29|12:19:03.173] Maximum peer count                       ETH=50 LES=0 total=50
+WARN [04-29|12:19:03.180] Sanitizing cache to Go's GC limits       provided=4096 updated=2681
+INFO [04-29|12:19:03.186] Set global gas cap                       cap=25000000
+INFO [04-29|12:19:03.189] Allocated trie memory caches             clean=402.00MiB dirty=670.00MiB
+INFO [04-29|12:19:03.192] Allocated cache and file handles         database=C:\users\akinnubisa\Desktop\IT\PERSONAL\FINTECH\Blockchain-Tools\node4\geth\chaindata cache=1.31GiB handles=8192
+INFO [04-29|12:19:03.271] Opened ancient database                  database=C:\users\akinnubisa\Desktop\IT\PERSONAL\FINTECH\Blockchain-Tools\node4\geth\chaindata\ancient readonly=false
+INFO [04-29|12:19:03.280] Initialised chain configuration          config="{ChainID: 777 Homestead: 0 DAO: <nil> DAOSupport: false EIP150: 0 EIP155: 0 EIP158: 0 Byzantium: 0 Constantinople: 0 Petersburg: 0 Istanbul: 0, Muir Glacier: <nil>, Berlin: <nil>, YOLO v3: <nil>, Engine: clique}"
+INFO [04-29|12:19:03.295] Initialising Ethereum protocol           network=1 dbversion=<nil>
+WARN [04-29|12:19:03.300] Upgrade blockchain database version      from=<nil> to=8
+INFO [04-29|12:19:03.304] Loaded most recent local header          number=0 hash="1d2c49…817772" td=1 age=38m51s
+INFO [04-29|12:19:03.310] Loaded most recent local full block      number=0 hash="1d2c49…817772" td=1 age=38m51s
+INFO [04-29|12:19:03.324] Loaded most recent local fast block      number=0 hash="1d2c49…817772" td=1 age=38m51s
+WARN [04-29|12:19:03.332] Failed to load snapshot, regenerating    err="missing or corrupted snapshot"
+INFO [04-29|12:19:03.339] Rebuilding state snapshot
+INFO [04-29|12:19:03.343] Deleted state snapshot leftovers         kind=accounts wiped=0 elapsed=0s
+INFO [04-29|12:19:03.343] Wiper running, state snapshotting paused accounts=0 slots=0 storage=0.00B elapsed="573µs"
+INFO [04-29|12:19:03.349] Deleted state snapshot leftovers         kind=storage  wiped=0 elapsed=0s
+INFO [04-29|12:19:03.365] Compacting snapshot account area
+INFO [04-29|12:19:03.353] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [04-29|12:19:03.383] Compacting snapshot storage area
+INFO [04-29|12:19:03.387] Compacted snapshot area in database      elapsed=21.884ms
+INFO [04-29|12:19:03.393] Resuming state snapshot generation       root="a0526f…06bee4" accounts=0 slots=0 storage=0.00B elapsed=0s
+INFO [04-29|12:19:03.413] Allocated fast sync bloom                size=1.31GiB
+INFO [04-29|12:19:03.420] Generated state snapshot                 accounts=2 slots=0 storage=140.00B elapsed=27.024ms
+INFO [04-29|12:19:03.424] Initialized state bloom                  items=3 errorrate=0.000 elapsed=0s
+WARN [04-29|12:19:03.424] Error reading unclean shutdown markers   error="leveldb: not found"
+INFO [04-29|12:19:03.425] Stored checkpoint snapshot to disk       number=0 hash="1d2c49…817772"
+INFO [04-29|12:19:03.448] Starting peer-to-peer node               instance=Geth/v1.10.2-stable-97d11b01/windows-amd64/go1.16
+INFO [04-29|12:19:03.504] New local node record                    seq=1 id=13cea3147475bcdd ip=127.0.0.1 udp=30304 tcp=30304
+Unlocking account 0xd43Eae2931f69DE3310b985A17893765D890B180 | Attempt 1/3
+Password: INFO [04-29|12:19:03.533] Started P2P networking                   self=enode://dc6c887729d19b9a5571c15b4f955bd7fb49f24a338a4f5740fb18aa6e56bd4c800bb17f6f1a2dc0409ebeae27156bb20d332ed60cceedc7f4dc7fc6a15634f1@127.0.0.1:30304
+INFO [04-29|12:19:13.565] Looking for peers                        peercount=1 tried=1 static=0
+INFO [04-29|12:19:23.568] Looking for peers                        peercount=1 tried=17 static=0
+INFO [04-29|12:19:33.600] Looking for peers                        peercount=1 tried=14 static=0
+INFO [04-29|12:19:44.236] Looking for peers                        peercount=1 tried=27 static=0
+INFO [04-29|12:19:54.275] Looking for peers                        peercount=1 tried=20 static=0
+INFO [04-29|12:20:04.576] Looking for peers                        peercount=1 tried=13 static=0
+INFO [04-29|12:20:14.586] Looking for peers                        peercount=1 tried=28 static=0
+INFO [04-29|12:20:24.952] Looking for peers                        peercount=1 tried=21 static=0
+
+
