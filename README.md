@@ -67,7 +67,7 @@ Next use **puppeth** to generate the genesis block following the procedure below
 
 Using geth,initialize each node with the new `samchain.json`.
 
-Open side by side two  terminals such as Git Bash windows, one for Node 11 and the other for Node 22, and run the following commands:
+Open two  terminals such as Git Bash windows, one for Node 11 and the other for Node 22, and run the following commands:
 
 `./geth --datadir node11 init samchain.json`
 
@@ -76,7 +76,7 @@ Open side by side two  terminals such as Git Bash windows, one for Node 11 and t
 
 ## Begin Mining Blocks
 
-Run the nodes in separate terminal windows with the commands:
+Run the nodes in the  two separate terminal  that were opened in the above step with the commands:
 
 `./geth --datadir node11 --unlock "SEALER_ONE_ADDRESS" --mine --rpc --allow-insecure-unlock`
 
