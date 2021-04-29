@@ -131,10 +131,10 @@ The PoA blockchain should be now up and running.
 ![SetUpYourCustomNode](Images/send_txn1.png)
 
 - Confirm the transaction by clicking "Send Transaction", and the "Send" button in the pop-up window.
-![SetUpYourCustomNode](Images/confirm_txt2.png)
+![SetUpYourCustomNode](Images/Confirm_txt2.png)
 
 - Click the Check TX Status when the green message pops up, confirm the logout:
-![SetUpYourCustomNode](Images/confirm_txn3.png)
+![SetUpYourCustomNode](Images/Confirm_txn3.png)
 
 ![SetUpYourCustomNode](Images/logout_tnx.png)
 
