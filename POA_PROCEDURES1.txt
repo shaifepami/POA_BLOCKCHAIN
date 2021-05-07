@@ -173,9 +173,9 @@ INFO [04-26|05:02:16.675] Successfully wrote genesis state         database=ligh
 
 #######ACCOUNT 1
 
-./geth --networkid 777 --datadir node11 --port 30303 --password password.txt --unlock "0x063E5Dc3B3018348211586db24eF6180DB0afAe8" --mine --rpc --miner.threads 1 --allow-insecure-unlock
+
 samuel.akinnubi@UBANOTE013 MINGW64 ~/Desktop/IT/PERSONAL/FINTECH/Blockchain-Tools
-$ ./geth --datadir node11 --unlock 0x063E5Dc3B3018348211586db24eF6180DB0afAe8 --mine --rpc --allow-insecure-unlock
+$ ./geth --networkid 777 --datadir node11 --port 30303 --password password.txt --unlock "0x063E5Dc3B3018348211586db24eF6180DB0afAe8" --mine --rpc --miner.threads 1 --allow-insecure-unlock
 INFO [04-26|05:06:51.567] Starting Geth on Ethereum mainnet...
 INFO [04-26|05:06:51.574] Bumping default cache on mainnet         provided=1024 updated=4096
 INFO [04-26|05:06:51.583] Maximum peer count                       ETH=50 LES=0 total=50
@@ -282,10 +282,6 @@ INFO [05-07|05:28:53.012] 🔨 mined potential block                  number=34 
 INFO [05-07|05:29:08.042] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=0s        mgasps=NaN   number=35 hash="c56e0c…a6f89d" dirty=743.00B
 INFO [05-07|05:29:08.050] 🔗 block reached canonical chain          number=28 hash="96e13d…397874"
 INFO [05-07|05:29:08.053] Commit new mining work                   number=36 sealhash="10781a…621a31" uncles=0 txs=0 gas=0     fees=0       elapsed=3.127ms
-
-
-
-self=enode://33540bef17206bb4276e5a380e258468cfbf8cf2a8c52935ac49ce1ab2ee63179137c1d3a2792e59bc2ab65fcfb2d9300706612919948b1b2566f103d73b270a@127.0.0.1:30303
 
 
 ########## Account 2
