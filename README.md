@@ -45,9 +45,9 @@ Generate two new nodes with new account addresses that will serve as the pre-app
 
 **Create Node 22:**
 
-`./geth --datadir ode2 account new`
+`./geth --datadir node2 account new`
 
-![SetUpYourCustomNode](Images/Node22.jpg)
+![SetUpYourCustomNode](Images/node22.jpg)
 
 It is expected that you have to run these commands from the folder in which you have Geth installed. Once the two nodes have been generated, there will be two folders created – `node11` and `node22` – each containing a folder with a keystore for that node.
 
@@ -79,17 +79,6 @@ Open two  terminals such as Git Bash windows, one for Node 11 and the other for 
 `./geth --datadir node11 init samchain.json`
 
 `./geth --datadir node22 init samchain.json`
-
-### KEYWORDS TO NOTE
- node11                                               ------This is the name of the Blockchain Nodes for the new account  i created
- 
- node22                            ---------- This is the name of the 2nd Blockchain Nodes for the 2nd new account  i created
- 
- init                               ----- ---Bootstrap and initialize a new genesis block
- 
- samchain.json                     -------- The json file of the network name i created.
- 
---datadir                          --------- Data directory for the databases and keystore (default: "~/.ethereum")
 
 ![StartMininrg](Images/init_node.jpg)
 
@@ -139,19 +128,19 @@ The PoA blockchain should be now up and running.
 ![SetUpYourCustomNode](Images/AccountBalance2.png)
 
 - In the To Address box, type the account address from Node22, then fill in an arbitrary amount of ETH:
-![SetUpYourCustomNode](Images/send_txn1.png)
+![SetUpYourCustomNode](Images/send1.png)
 
 - Confirm the transaction by clicking "Send Transaction", and the "Send" button in the pop-up window.
-![SetUpYourCustomNode](Images/Confirm_txt2.png)
+![SetUpYourCustomNode](Images/send_confirm.png)
 
 - Click the Check TX Status when the green message pops up, confirm the logout:
-![SetUpYourCustomNode](Images/Confirm_txn3.png)
+![SetUpYourCustomNode](Images/tx_status.png)
 
 ![SetUpYourCustomNode](Images/logout_tnx.png)
 
 - You should see the transaction go from Pending to Successful in around the same blocktime you set in the genesis.
 
 - You can click the Check TX Status button to update the status.
-![SetUpYourCustomNode](Images/check_tnx_status.png)
+![SetUpYourCustomNode](Images/tx_Status_successful.png)
 
 - This confirms that you have successfully created your own private blockchain!
