@@ -173,7 +173,7 @@ INFO [04-26|05:02:16.675] Successfully wrote genesis state         database=ligh
 
 #######ACCOUNT 1
 
-./geth --datadir node1 --unlock 0x2f75A66e65fdf861531c8932DE23059F576aC971 --mine --rpc --allow-insecure-unlock
+./geth --networkid 777 --datadir node11 --port 30303 --password password.txt --unlock "0x063E5Dc3B3018348211586db24eF6180DB0afAe8" --mine --rpc --miner.threads 1 --allow-insecure-unlock
 samuel.akinnubi@UBANOTE013 MINGW64 ~/Desktop/IT/PERSONAL/FINTECH/Blockchain-Tools
 $ ./geth --datadir node11 --unlock 0x063E5Dc3B3018348211586db24eF6180DB0afAe8 --mine --rpc --allow-insecure-unlock
 INFO [04-26|05:06:51.567] Starting Geth on Ethereum mainnet...
@@ -255,16 +255,34 @@ INFO [04-26|05:50:40.540] Looking for peers                        peercount=1 t
 INFO [04-26|05:50:44.972] Setting new local account                address=0x063E5Dc3B3018348211586db24eF6180DB0afAe8
 INFO [04-26|05:50:45.033] Submitted transaction                    hash=0x8f46d5f683aa5cfa55ac6509253e9bf7913512b9f3269cb47551377d73a7dee3 from=0x063E5Dc3B3018348211586db24eF6180DB0afAe8 nonce=0 recipient=0xD509b1F43a2901b990b9E21642026c44262Dd5C5 value=100000000000000000000
 INFO [04-26|05:50:50.544] Looking for peers                        peercount=1 tried=13 static=0
-INFO [04-26|05:51:01.047] Looking for peers                        peercount=1 tried=10 static=0
-INFO [04-26|05:51:11.094] Looking for peers                        peercount=1 tried=19 static=0
-INFO [04-26|05:51:21.411] Looking for peers                        peercount=1 tried=36 static=0
-INFO [04-26|05:51:31.990] Looking for peers                        peercount=1 tried=23 static=0
-INFO [04-26|05:51:42.013] Looking for peers                        peercount=1 tried=26 static=0
-INFO [04-26|05:51:52.127] Looking for peers                        peercount=1 tried=35 static=0
-INFO [04-26|05:52:02.406] Looking for peers                        peercount=1 tried=34 static=0
-INFO [04-26|05:52:12.420] Looking for peers                        peercount=1 tried=28 static=0
-INFO [04-26|05:52:22.423] Looking for peers                        peercount=1 tried=29 static=0
-INFO [04-26|05:52:32.600] Looking for peers                        peercount=1 tried=32 static=0
+INFO [05-07|05:27:23.025] 🔨 mined potential block                  number=28 hash="96e13d…397874"
+INFO [05-07|05:27:23.007] Commit new mining work                   number=29 sealhash="ca0b66…12effe" uncles=0 txs=0 gas=0     fees=0       elapsed=0s
+INFO [05-07|05:27:23.007] Signed recently, must wait for others
+INFO [05-07|05:27:38.024] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=0s        mgasps=NaN   number=29 hash="57de72…357df3" dirty=743.00B
+INFO [05-07|05:27:38.041] 🔗 block reached canonical chain          number=22 hash="f91a45…b2d95a"
+INFO [05-07|05:27:38.043] Commit new mining work                   number=30 sealhash="e6c039…76c4a1" uncles=0 txs=0 gas=0     fees=0       elapsed=2.562ms
+INFO [05-07|05:27:53.005] Successfully sealed new block            number=30 sealhash="e6c039…76c4a1" hash="44038f…021a14" elapsed=14.964s
+INFO [05-07|05:27:53.005] Commit new mining work                   number=31 sealhash="58f28f…171015" uncles=0 txs=0 gas=0     fees=0       elapsed=0s
+INFO [05-07|05:27:53.005] Signed recently, must wait for others
+INFO [05-07|05:27:53.005] 🔨 mined potential block                  number=30 hash="44038f…021a14"
+INFO [05-07|05:28:08.036] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=0s        mgasps=NaN   number=31 hash="36e052…63bba2" dirty=743.00B
+INFO [05-07|05:28:08.044] 🔗 block reached canonical chain          number=24 hash="bf3455…5addae"
+INFO [05-07|05:28:08.047] Commit new mining work                   number=32 sealhash="f08920…269c37" uncles=0 txs=0 gas=0     fees=0       elapsed=3.229ms
+INFO [05-07|05:28:23.010] Successfully sealed new block            number=32 sealhash="f08920…269c37" hash="183bf5…ac5dad" elapsed=14.966s
+INFO [05-07|05:28:23.027] 🔨 mined potential block                  number=32 hash="183bf5…ac5dad"
+INFO [05-07|05:28:23.010] Commit new mining work                   number=33 sealhash="0fa147…2376c6" uncles=0 txs=0 gas=0     fees=0       elapsed=0s
+INFO [05-07|05:28:23.010] Signed recently, must wait for others
+INFO [05-07|05:28:38.040] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=0s        mgasps=NaN   number=33 hash="6a0987…3d90a4" dirty=743.00B
+INFO [05-07|05:28:38.048] 🔗 block reached canonical chain          number=26 hash="10c829…91d145"
+INFO [05-07|05:28:38.052] Commit new mining work                   number=34 sealhash="8b561d…f33706" uncles=0 txs=0 gas=0     fees=0       elapsed=3.111ms
+INFO [05-07|05:28:53.012] Successfully sealed new block            number=34 sealhash="8b561d…f33706" hash="5f84ed…d18989" elapsed=14.963s
+INFO [05-07|05:28:53.012] Commit new mining work                   number=35 sealhash="800936…2318f0" uncles=0 txs=0 gas=0     fees=0       elapsed=0s
+INFO [05-07|05:28:53.012] Signed recently, must wait for others
+INFO [05-07|05:28:53.012] 🔨 mined potential block                  number=34 hash="5f84ed…d18989"
+INFO [05-07|05:29:08.042] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=0s        mgasps=NaN   number=35 hash="c56e0c…a6f89d" dirty=743.00B
+INFO [05-07|05:29:08.050] 🔗 block reached canonical chain          number=28 hash="96e13d…397874"
+INFO [05-07|05:29:08.053] Commit new mining work                   number=36 sealhash="10781a…621a31" uncles=0 txs=0 gas=0     fees=0       elapsed=3.127ms
+
 
 
 self=enode://33540bef17206bb4276e5a380e258468cfbf8cf2a8c52935ac49ce1ab2ee63179137c1d3a2792e59bc2ab65fcfb2d9300706612919948b1b2566f103d73b270a@127.0.0.1:30303
@@ -272,7 +290,7 @@ self=enode://33540bef17206bb4276e5a380e258468cfbf8cf2a8c52935ac49ce1ab2ee6317913
 
 ########## Account 2
 samuel.akinnubi@UBANOTE013 MINGW64 ~/Desktop/IT/PERSONAL/FINTECH/Blockchain-Tools
-$ ./geth --datadir node4 --unlock 0xd43Eae2931f69DE3310b985A17893765D890B180 --mine --port 30304 --bootnodes enode://4318a2e6db6532b9ed8bdc36a4f30f102bcedb5c2ac6a071d21a1f15619b726344f6dde47c3ca4376b342d9a7738165be7c87a4ea9b468c4489719e1ada600d0@127.0.0.1:30303 --ipcdisable --allow-insecure-unlock
+$ ./geth --networkid 777 --datadir node22 --unlock "0xD509b1F43a2901b990b9E21642026c44262Dd5C5" --mine --port 30304 --password password.txt --bootnodes "enode://4318a2e6db6532b9ed8bdc36a4f30f102bcedb5c2ac6a071d21a1f15619b726344f6dde47c3ca4376b342d9a7738165be7c87a4ea9b468c4489719e1ada600d0@127.0.0.1:30303" --ipcdisable --allow-insecure-unlock
 INFO [04-28|05:29:42.975] Starting Geth on Ethereum mainnet...
 INFO [04-28|05:29:42.983] Bumping default cache on mainnet         provided=1024 updated=4096
 INFO [04-28|05:29:42.989] Maximum peer count                       ETH=50 LES=0 total=50
@@ -299,12 +317,35 @@ Password: INFO [04-28|05:29:43.753] Started P2P networking                   sel
 INFO [04-28|05:29:46.265] New local node record                    seq=4 id=c3c7b2f5e2259414 ip=100.8.95.108 udp=30304 tcp=30304
 INFO [04-28|05:29:46.765] Mapped network port                      proto=tcp extport=30304 intport=30304 interface="UPNP IGDv2-IP2"
 INFO [04-28|05:29:47.410] Mapped network port                      proto=udp extport=30304 intport=30304 interface="UPNP IGDv2-IP2"
-
-Unlocking account 0xD509b1F43a2901b990b9E21642026c44262Dd5C5 | Attempt 2/3
-Password:
-Unlocking account 0xD509b1F43a2901b990b9E21642026c44262Dd5C5 | Attempt 3/3
-Password: INFO [04-28|05:29:54.004] Looking for peers                        peercount=1 tried=14 static=0
-INFO [04-28|05:30:04.124] Looking for peers                        peercount=1 tried=28 static=0
+INFO [05-07|05:26:53.011] 🔨 mined potential block                  number=26 hash="10c829…91d145"
+INFO [05-07|05:27:08.039] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=0s        mgasps=NaN   number=27 hash="bf9fee…b43fe3" dirty=743.00B
+INFO [05-07|05:27:08.039] 🔗 block reached canonical chain          number=20 hash="2dee49…471d6c"
+INFO [05-07|05:27:08.049] Commit new mining work                   number=28 sealhash="131955…5dd82b" uncles=0 txs=0 gas=0     fees=0       elapsed=10.088ms
+INFO [05-07|05:27:23.007] Successfully sealed new block            number=28 sealhash="131955…5dd82b" hash="96e13d…397874" elapsed=14.968s
+INFO [05-07|05:27:23.025] 🔨 mined potential block                  number=28 hash="96e13d…397874"
+INFO [05-07|05:27:23.007] Commit new mining work                   number=29 sealhash="ca0b66…12effe" uncles=0 txs=0 gas=0     fees=0       elapsed=0s
+INFO [05-07|05:27:23.007] Signed recently, must wait for others
+INFO [05-07|05:27:38.024] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=0s        mgasps=NaN   number=29 hash="57de72…357df3" dirty=743.00B
+INFO [05-07|05:27:38.041] 🔗 block reached canonical chain          number=22 hash="f91a45…b2d95a"
+INFO [05-07|05:27:38.043] Commit new mining work                   number=30 sealhash="e6c039…76c4a1" uncles=0 txs=0 gas=0     fees=0       elapsed=2.562ms
+INFO [05-07|05:27:53.005] Successfully sealed new block            number=30 sealhash="e6c039…76c4a1" hash="44038f…021a14" elapsed=14.964s
+INFO [05-07|05:27:53.005] Commit new mining work                   number=31 sealhash="58f28f…171015" uncles=0 txs=0 gas=0     fees=0       elapsed=0s
+INFO [05-07|05:27:53.005] Signed recently, must wait for others
+INFO [05-07|05:27:53.005] 🔨 mined potential block                  number=30 hash="44038f…021a14"
+INFO [05-07|05:28:08.036] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=0s        mgasps=NaN   number=31 hash="36e052…63bba2" dirty=743.00B
+INFO [05-07|05:28:08.044] 🔗 block reached canonical chain          number=24 hash="bf3455…5addae"
+INFO [05-07|05:28:08.047] Commit new mining work                   number=32 sealhash="f08920…269c37" uncles=0 txs=0 gas=0     fees=0       elapsed=3.229ms
+INFO [05-07|05:28:23.010] Successfully sealed new block            number=32 sealhash="f08920…269c37" hash="183bf5…ac5dad" elapsed=14.966s
+INFO [05-07|05:28:23.027] 🔨 mined potential block                  number=32 hash="183bf5…ac5dad"
+INFO [05-07|05:28:23.010] Commit new mining work                   number=33 sealhash="0fa147…2376c6" uncles=0 txs=0 gas=0     fees=0       elapsed=0s
+INFO [05-07|05:28:23.010] Signed recently, must wait for others
+INFO [05-07|05:28:38.040] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=0s        mgasps=NaN   number=33 hash="6a0987…3d90a4" dirty=743.00B
+INFO [05-07|05:28:38.048] 🔗 block reached canonical chain          number=26 hash="10c829…91d145"
+INFO [05-07|05:28:38.052] Commit new mining work                   number=34 sealhash="8b561d…f33706" uncles=0 txs=0 gas=0     fees=0       elapsed=3.111ms
+INFO [05-07|05:28:53.012] Successfully sealed new block            number=34 sealhash="8b561d…f33706" hash="5f84ed…d18989" elapsed=14.963s
+INFO [05-07|05:28:53.012] Commit new mining work                   number=35 sealhash="800936…2318f0" uncles=0 txs=0 gas=0     fees=0       elapsed=0s
+INFO [05-07|05:28:53.012] Signed recently, must wait for others
+INFO [05-07|05:28:53.012] 🔨 mined potential block                  number=34 hash="5f84ed…d18989"
 
 
 
